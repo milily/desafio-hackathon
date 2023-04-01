@@ -37,11 +37,7 @@
   }
 }
 
-.css-am3kyg-MuiButtonBase-root-MuiButton-root:hover{
+.css-u52ft7-MuiButtonBase-root-MuiButton-root:hover{
   color: #3e3f3e;
-  background-color: #ffd100;
-}
-
-.MuiToolbar-root.MuiToolbar-regular.css-r6ewbb-MuiToolbar-root{
-  color: #3e3f3e;
+  background-color: #ffd100 !important;
 }

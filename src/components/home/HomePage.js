@@ -60,15 +60,9 @@ const Home = () => {
             <Grid container sx={{ justifyContent: 'center' }}>
                 <Grid item xs={9}>
                     <Grid container spacing={2}>
-                        {
-                            streamingContent.map((singleContent,index) =>{
-                                return(
-                                    <Grid item key={index} lg={3} xs={12} md={4} sm={12}>
-                                        <h1>Hola</h1>
-                                    </Grid>
-                                )
-                            })
-                        }
+                        <Grid item lg={3} xs={12} md={4} sm={12}>
+                            <h1>Hola</h1>
+                        </Grid>
                     </Grid>
                 </Grid>
             </Grid>

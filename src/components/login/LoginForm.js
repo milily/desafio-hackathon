@@ -9,9 +9,12 @@ import IconButton from '@mui/material/IconButton';
 import TextField from '@mui/material/TextField';
 import FormControl from '@mui/material/FormControl';
 import InputAdornment from '@mui/material/InputAdornment';
-
+import Button from '@mui/material/Button';
+//Auth0
+import { useAuth0 } from '@auth0/auth0-react'
 
 const LoginForm = () => {
+    const {loginWithRedirect} = useAuth0()
     const [values, setValues] = React.useState({
         amount: '',
         password: '',
@@ -69,6 +72,14 @@ const LoginForm = () => {
                         }
                         label="Password"
                     />
+              <Button 
+                sx={{mt:2, backgroundColor: '#ffd100', display: 'flex', justifyContent: 'center', justifyItems: 'center'}}
+                variant="contained">Iniciar Sesión
+              </Button>
+              <Button 
+                sx={{mt:2, backgroundColor: '#ffd100', display: 'flex', justifyContent: 'center', justifyItems: 'center'}}
+                variant="contained" onClick={() => loginWithRedirect()}>Usar otra cuenta
+              </Button>
             </FormControl>
         </Box>
     )

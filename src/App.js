@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 //Components
 import Login from './components/login/LoginSite';
 import Home from './components/home/HomePage'
-import Header from './components/home/Header';
+import Header from './components/header/Header';
 //Styles
 import './App.css';
 //Authentication with Auth0
