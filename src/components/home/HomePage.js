@@ -1,12 +1,7 @@
 import React, { Fragment, useEffect, useState} from "react";
 //MUI Components
 import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button';
-//Images or Logo
-// import friendlyKittyIcon from '../../assets/images/friendly-kitten-icon.png'
-//Components
-// import CardContents from "./Card";
-// import Search from './Search'
+import ChartByWeeks from "../charts/ChartByWeeks";
 //Axios for API call
 import axios from "axios";
 
@@ -47,21 +42,15 @@ const Home = () => {
 
     return(
         <Fragment>
+            <h2 sx={{ display: 'flex', justifyContent: 'center'}}>Gráfico Estado de ánimo por semana</h2>
             <Grid container sx={{ justifyContent: 'center', marginTop: '50px'}}>
-                <Grid item >
-                    <img
-                        sx={{ justifyContent: 'center'}}
-                        width={'120'}
-                        // src={friendlyKittyIcon}
-                        alt={'kitty'}
-                    />
-                </Grid>
             </Grid>
             <Grid container sx={{ justifyContent: 'center' }}>
-                <Grid item xs={9}>
-                    <Grid container spacing={2}>
-                        <Grid item lg={3} xs={12} md={4} sm={12}>
-                            <h1>Hola</h1>
+                <Grid item xs={6}>
+                    <Grid container>
+                        <Grid className="chartparent">
+                            <ChartByWeeks 
+                            />
                         </Grid>
                     </Grid>
                 </Grid>

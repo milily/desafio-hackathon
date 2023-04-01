@@ -17,6 +17,8 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+//components
+import MenuHeader from '../menu/Menu'
 
 
 const Header = () =>{
@@ -155,6 +157,7 @@ const Header = () =>{
                     </Box>
                 </Toolbar>
             </Container>
+            <MenuHeader />
         </AppBar>
     );
 }
