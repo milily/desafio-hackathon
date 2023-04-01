@@ -2,8 +2,6 @@ import React, { Fragment } from "react";
 //Components
 import LoginButton from "./LoginButton";
 import LoginForm from "./LoginForm";
-//Auth0
-import { useAuth0 } from '@auth0/auth0-react'
 //Images or Logo
 import apiuxLogo from './../../assets/images/logoapiux.png'
 //MUI Components

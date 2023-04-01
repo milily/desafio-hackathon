@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 //Components
 import Login from './components/login/LoginSite';
 import Home from './components/home/HomePage'
-import LogoutButton from './components/login/LogoutButton';
+import Header from './components/home/Header';
 //Styles
 import './App.css';
 //Authentication with Auth0
@@ -20,7 +20,7 @@ function App() {
         <div>
             {isAuthenticated ? (
                   <Fragment>
-                      <LogoutButton />
+                      <Header />
                       <Home />
                   </Fragment>
                 ): <Login />}
