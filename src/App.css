@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #1960ed;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +35,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.css-am3kyg-MuiButtonBase-root-MuiButton-root:hover{
+  color: #3e3f3e
 }

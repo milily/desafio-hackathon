@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import { Fragment } from 'react';
+//Components
+import Login from './components/login/LoginSite';
+import Home from './components/home/HomePage'
+import LogoutButton from './components/login/LogoutButton';
+//Styles
 import './App.css';
+//Authentication with Auth0
+import { useAuth0 } from '@auth0/auth0-react' 
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const {isAuthenticated, isLoading} = useAuth0()
+
+    if (isLoading){
+      return <div><h1>Loading...</h1></div>
+    }
+
+    return (
+        <div>
+            {isAuthenticated ? (
+                  <Fragment>
+                      <LogoutButton />
+                      <Home />
+                  </Fragment>
+                ): <Login />}
+        </div>
+    );
 }
 
 export default App;
